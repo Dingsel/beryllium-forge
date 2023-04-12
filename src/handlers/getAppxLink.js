@@ -159,7 +159,8 @@ function editPack(pathToPack, packName, shorthand) {
 }
 
 function registerPack(path) {
-  exec(`Add-AppxPackage -path ${path} -register`, { shell: "powershell.exe" })
+  const procces = exec(`Add-AppxPackage -path ${path} -register`, { shell: "powershell.exe" })
+  procces.stderr.on("data", console.log)
   globalThis.mainWindow.webContents.send("onUnzip", "Finished!")
   console.log("Done!")
 }
