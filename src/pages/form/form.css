@@ -1,0 +1,91 @@
+#formBlocker {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 199;
+    background-color: #1c1c1c;
+    opacity: 70%;
+}
+
+#formClose {
+    all: unset;
+    display: flex;
+    flex: 0 0 100%;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    align-self: flex-end;
+    margin-right: 25px;
+    margin-top: 25px;
+    background-color: #242424;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+#formClose svg path {
+    fill: rgb(200, 200, 200);
+}
+
+#form button:hover {
+    transition: all 0.3s;
+    filter: brightness(150%);
+}
+
+#form {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    background-color: #1f1f1f;
+    z-index: 200;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    color: rgb(200, 200, 200);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+#formTitle {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#formSubmit {
+    all: unset;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+    display: grid;
+    background-color: #242424;
+    height: 50px;
+    width: 100px;
+    align-self: flex-end;
+    margin-right: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#formText {
+    margin-bottom: 0px;
+    margin-top: 5px;
+    margin-left: 25px;
+}
+
+#formInput {
+    margin-top: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#formDropdown {
+    margin-top: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+}

@@ -1,0 +1,131 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #0D0D0D;
+}
+
+#packs {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#pack {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#img {
+  width: 128px;
+  height: auto;
+}
+
+#bar {
+  width: 128px;
+  height: 45px;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: space-evenly;
+  transition: all 0.3s;
+}
+
+#bar svg path {
+  fill: rgb(200, 200, 200);
+}
+
+#bar :hover {
+  transition: all 0.3s;
+  filter: brightness(150%);
+}
+
+#button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  background-color: #1f1f1f;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  scale: 0.8;
+}
+
+#header {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 128px;
+  height: 30px;
+  background-image: linear-gradient(to bottom, rgba(46, 46, 46, 0.858), rgba(46, 46, 46, 0.595));
+  color: rgb(200, 200, 200);
+  font-size: 27px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#reveal {
+  margin-top: calc(25% + 10px);
+}
+
+#close {
+  margin-top: calc(50% + 20px);
+}
+
+#menu button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  text-align: center;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 25%;
+}
+
+#bar button svg :not(.description) {
+  pointer-events: none;
+}
+
+#selection {
+  width: 100%;
+  height: 45px;
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#addPack {
+  display: flex;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+  background-color: #1f1f1f;
+  color: rgb(200, 200, 200);
+  border: unset;
+  transition: all 0.3s;
+}
+
+#selection :hover {
+  filter: brightness(150%);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#addPack svg path {
+  fill: rgb(200, 200, 200);
+}
+
+
+#reload svg path {
+  fill: rgb(200, 200, 200);
+}
+#reload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: unset;
+}

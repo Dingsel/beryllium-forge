@@ -1,0 +1,41 @@
+{
+  "name": "beryllium-forge",
+  "productName": "beryllium-forge",
+  "type": "commonjs",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Dingsel",
+    "email": "95553908+Dingsel@users.noreply.github.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "decompress": "^4.2.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "fast-xml-parser": "^4.2.0",
+    "fetch": "^1.1.0",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "node-fetch": "^3.3.1",
+    "request": "^2.88.2",
+    "xml-js": "^1.6.11",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.1.0",
+    "@electron-forge/maker-deb": "^6.1.0",
+    "@electron-forge/maker-rpm": "^6.1.0",
+    "@electron-forge/maker-squirrel": "^6.1.0",
+    "@electron-forge/maker-zip": "^6.1.0",
+    "electron": "24.0.0"
+  }
+}
