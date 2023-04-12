@@ -69,13 +69,8 @@ const map = {
 async function getPacks() {
   /** @type {Array<string>} */
   const packs = await window.electronAPI.packs()
-  const names = packs.map(x => {
-    const name = x.split('Microsoft.Minecraft')[1].split('_8wekyb3d8bbwe')[0]
-    return map[name] ?? name
-  })
-  for (let i = 0; i < packs.length; i++) {
-    const element = packs[i];
-    addPack(names[i], element)
+  for (const pack of packs) {
+    addPack(pack.name, pack.UWPName)
   }
 }
 getPacks()

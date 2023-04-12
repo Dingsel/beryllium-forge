@@ -155,12 +155,18 @@ function editPack(pathToPack, packName, shorthand) {
   const str = JSON.stringify(appxManifest).replace("Minecraft: Windows 10 Edition", packName)
   const xml = json2xml(str)
   writeFileSync(pathToPack + "\\AppxManifest.xml", xml)
-  registerPack(pathToPack + "\\AppxManifest.xml")
+  registerPack(pathToPack, packName, shorthand)
 }
 
-function registerPack(path) {
-  const procces = exec(`Add-AppxPackage -path ${path} -register`, { shell: "powershell.exe" })
-  procces.stderr.on("data", console.log)
+function registerPack(path, packName, shorthand) {
+  const instanceData = {
+    name: packName,
+    shortHand: shorthand,
+    UWPName: `Microsoft.Minecraft${shorthand}_8wekyb3d8bbwe`
+  }
+  writeFileSync(path + "\\.instance", JSON.stringify(instanceData))
+  const procces = exec(`Add-AppxPackage -path "${path + "\\AppxManifest.xml"}" -register`, { shell: "powershell.exe" })
+  procces.stderr.on("data", (data) => { globalThis.mainWindow.webContents.send("castError", ERRORS.SHELL_ERROR, data) })
   globalThis.mainWindow.webContents.send("onUnzip", "Finished!")
   console.log("Done!")
 }
