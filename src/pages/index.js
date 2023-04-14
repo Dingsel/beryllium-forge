@@ -60,12 +60,6 @@ function addPack(name, uwpName) {
   list.appendChild(node)
 }
 
-const map = {
-  'UWP': 'Default',
-  'WindowsBeta': 'Preview'
-}
-
-
 async function getPacks() {
   /** @type {Array<string>} */
   const packs = await window.electronAPI.packs()

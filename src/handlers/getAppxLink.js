@@ -179,6 +179,3 @@ module.exports = {
 ipcMain.handle("cancelDownload", (_) => {
   stopDownload = true
 })
-
-
-

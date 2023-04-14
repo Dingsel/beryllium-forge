@@ -122,10 +122,12 @@ body {
   fill: rgb(200, 200, 200);
 }
 #reload {
+  all : unset;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 45px;
   height: 45px;
-  background-color: unset;
+  background-color: #1f1f1f;
+  transition: all 0.3s;
 }
