@@ -6,12 +6,12 @@ I used to use this Project to learn from it and it is by far from finished. I le
 
 There are many flaws that should be concidered while runing this application:
 
-1.Dev mode needs to be enabled in your windows settings.
+1. Dev mode needs to be enabled in your windows settings.
 
-2.The Downloaded versions are getting saved in the apps directory and need to be deleted manually.
+2. The Downloaded versions are getting saved in the apps directory and need to be deleted manually.
 
-3.Each version except for the official once are running in Trial mode.
+3. Each version except for the official once are running in Trial mode.
 
-4.bad ui/ux
+4. bad ui/ux
 
 All rights of assets used inside the application belong to Mojang.
